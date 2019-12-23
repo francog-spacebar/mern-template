@@ -1,25 +1,25 @@
-import React, { Component } from 'react'
-import styles from './navigation.module.scss'
-import { connect } from 'react-redux'
-import { Navbar, Nav, Button } from 'react-bootstrap'
-import { LinkContainer } from 'react-router-bootstrap'
+import React, { Component } from "react";
+import styles from "./navigation.module.scss";
+import { connect } from "react-redux";
+import { Navbar, Nav, Button } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 
 class Navigation extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       navExpanded: false,
       email: null
-    }
+    };
   }
 
   setNavExpanded = expanded => {
-    this.setState({ navExpanded: expanded })
-  }
+    this.setState({ navExpanded: expanded });
+  };
 
   closeNav = () => {
-    this.setState({ navExpanded: false })
-  }
+    this.setState({ navExpanded: false });
+  };
 
   render() {
     return (
@@ -32,7 +32,7 @@ class Navigation extends Component {
         >
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <LinkContainer to="/">
-            <Navbar.Brand className={styles.navbarBrand}>Project/Navbar.Brand>
+            <Navbar.Brand className={styles.navbarBrand}>Project</Navbar.Brand>
           </LinkContainer>
 
           {this.props.authenticated ? (
@@ -53,7 +53,7 @@ class Navigation extends Component {
                     <a href="/profile">
                       {this.props.user
                         ? this.props.user.name || this.props.user.email
-                        : ''}
+                        : ""}
                     </a>
                   </Navbar.Text>
                 </LinkContainer>
@@ -87,14 +87,14 @@ class Navigation extends Component {
           )}
         </Navbar>
       </div>
-    )
+    );
   }
 }
 const mapStateToProps = state => {
   return {
     authenticated: state.authenticated,
     user: state.user
-  }
-}
+  };
+};
 
-export default connect(mapStateToProps)(Navigation)
+export default connect(mapStateToProps)(Navigation);
