@@ -1,0 +1,18 @@
+.app {
+  text-align: center;
+  display: block;
+}
+
+.body {
+  background-color: #003973;
+  background: rgba(255, 255, 255, 1);
+  min-height: 100vh;
+  min-width: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
