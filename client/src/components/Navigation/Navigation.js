@@ -32,7 +32,7 @@ class Navigation extends Component {
         >
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <LinkContainer to="/">
-            <Navbar.Brand className={styles.navbarBrand}>Zynch</Navbar.Brand>
+            <Navbar.Brand className={styles.navbarBrand}>Project/Navbar.Brand>
           </LinkContainer>
 
           {this.props.authenticated ? (

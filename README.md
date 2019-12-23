@@ -1,4 +1,4 @@
-# Zynch Middleware
+# MERN Template
 
 ## Instrucciones
 
